@@ -2,6 +2,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import imageUrl from '../img/javascript.svg';
 
 const refs = {
   startBtn: document.querySelector('[data-start]'),
@@ -25,7 +26,7 @@ const options = {
     if (selectedDates < new Date()) {
       refs.startBtn.classList.remove('button-on');
       iziToast.show({
-        iconUrl: '../img/javascript.svg',
+        iconUrl: imageUrl,
         title: 'Error',
         titleColor: 'white',
         message: 'Illegal operation',
