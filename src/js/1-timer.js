@@ -12,7 +12,6 @@ const refs = {
   seconds: document.querySelector('[data-seconds]'),
   input: document.querySelector('.input-timer'),
 };
-let newTime;
 
 const options = {
   enableTime: true,
@@ -49,6 +48,7 @@ let userSelectedDate;
 refs.startBtn.disabled = true;
 
 refs.startBtn.addEventListener('click', () => {
+  refs.input.disabled = true;
   const initTime = new Date(refs.input.value);
   refs.startBtn.classList.remove('button-on');
   refs.startBtn.disabled = true;
@@ -61,6 +61,7 @@ refs.startBtn.addEventListener('click', () => {
 
   setTimeout(() => {
     clearInterval(userSelectedDate);
+    refs.input.disabled = false;
   }, initTime - Date.now());
 });
 
