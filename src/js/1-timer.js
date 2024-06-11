@@ -23,6 +23,7 @@ const options = {
     selectedDates = selectedDates[0];
     refs.startBtn.disabled = true;
     if (selectedDates < new Date()) {
+      refs.startBtn.classList.remove('button-on');
       iziToast.show({
         iconUrl: '../img/javascript.svg',
         title: 'Error',
@@ -56,7 +57,7 @@ refs.startBtn.addEventListener('click', () => {
     const currentTime = Date.now();
     const diff = initTime - currentTime;
     const time = convertMs(diff);
-    const str = getTime(time);
+    const str = addLeadingZero(time);
   }, 1000);
 
   setTimeout(() => {
@@ -84,7 +85,7 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-function getTime({ days, hours, minutes, seconds }) {
+function addLeadingZero({ days, hours, minutes, seconds }) {
   days = days.toString().padStart(2, 0);
   hours = hours.toString().padStart(2, 0);
   minutes = minutes.toString().padStart(2, 0);
