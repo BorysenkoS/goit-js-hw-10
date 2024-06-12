@@ -21,3 +21,27 @@
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
+
+.snackbar-list {
+  width: 318px;
+  margin-bottom: 24px;
+
+  padding-left: 24px;
+  border-radius: 4px;
+  stroke-width: 1px;
+  stroke: #808080;
+}
+
+.snackbar-label {
+  display: inline-flex;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 34px;
+}
+
+.snackbar-input {
+  border: 1px solid #757575;
+  border-radius: 14px;
+  width: 20px;
+  height: 20px;
+}

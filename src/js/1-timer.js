@@ -18,8 +18,8 @@ const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
-
   minuteIncrement: 1,
+
   onClose(selectedDates) {
     selectedDates = selectedDates[0];
     refs.startBtn.disabled = true;
@@ -43,7 +43,6 @@ const options = {
   },
 };
 
-console.log(options.defaultDate);
 flatpickr('#datetime-picker', options, {});
 
 let userSelectedDate;
