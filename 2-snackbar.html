@@ -7,7 +7,9 @@
 
     <title>Snackbar</title>
     <script type="module" crossorigin src="/goit-js-hw-10/assets/modulepreload-polyfill-3cfb730f.js"></script>
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-3ac50372.css">
+    <script type="module" crossorigin src="/goit-js-hw-10/assets/vendor-77e16229.js"></script>
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-7a007824.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-66aec6ab.css">
   </head>
   <body>
     <a class="link" href="./index.html">Go back</a>
@@ -17,14 +19,26 @@
         <input class="form-input" type="number" name="delay" required />
       </label>
 
-      <fieldset>
+      <fieldset class="snackbar-list">
         <legend>State</legend>
-        <label>
-          <input type="radio" name="state" value="fulfilled" required />
+        <label class="snackbar-label">
+          <input
+            class="snackbar-input"
+            type="radio"
+            name="state"
+            value="fulfilled"
+            required
+          />
           Fulfilled
         </label>
-        <label>
-          <input type="radio" name="state" value="rejected" required />
+        <label class="snackbar-label">
+          <input
+            class="snackbar-input"
+            type="radio"
+            name="state"
+            value="rejected"
+            required
+          />
           Rejected
         </label>
       </fieldset>
