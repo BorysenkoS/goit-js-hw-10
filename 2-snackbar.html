@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Snackbar</title>
-    <script type="module" crossorigin src="/goit-js-hw-10/assets/modulepreload-polyfill-3cfb730f.js"></script>
-    <script type="module" crossorigin src="/goit-js-hw-10/assets/vendor-77e16229.js"></script>
+    <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/javascript-b2532f69.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-77e16229.js">
     <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-7a007824.css">
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-66aec6ab.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-56127f26.css">
   </head>
   <body>
     <a class="link" href="./index.html">Go back</a>
@@ -23,7 +24,7 @@
         <legend>State</legend>
         <label class="snackbar-label">
           <input
-            class="snackbar-input"
+            class="snackbar-input js-input-fulfilled"
             type="radio"
             name="state"
             value="fulfilled"
@@ -33,7 +34,7 @@
         </label>
         <label class="snackbar-label">
           <input
-            class="snackbar-input"
+            class="snackbar-input js-input-rejected"
             type="radio"
             name="state"
             value="rejected"
@@ -43,7 +44,7 @@
         </label>
       </fieldset>
 
-      <button type="submit">Create notification</button>
+      <button class="snackbar-btn" type="submit">Create notification</button>
     </form>
     
   </body>
